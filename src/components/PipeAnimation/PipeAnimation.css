@@ -1,0 +1,234 @@
+.canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .title {
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 0; /* Above everything */
+  }
+
+  .logo {
+    height: 260px;
+    width: 300px;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: funnelToCenter 3s linear forwards;
+    
+  }
+  
+  .square {
+    position: absolute;
+    border-radius: 0;
+    animation: pulse 2s infinite;
+    border-style: groove;
+  }
+
+  .pipe {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    width: 160px;
+    height: 110px;
+    background: #444;
+    border-radius: 10px;
+    z-index: 10; /* Pipe above desk */
+    box-shadow: 0 0 20px #222 inset;
+    transform: translate(-50%, -50%);
+  }
+  
+  .desk {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    width: 400px;
+    height: 300px;
+    z-index: 5; /* Desk behind pipe */
+    transform: translate(-50%, -10%); /* adjust to peek under the pipe */
+    pointer-events: none;
+  }
+
+  .resume {
+    position: absolute;
+    top: 59%;
+    left: 38%;
+    height: 90px;
+    width: 100px;
+    z-index: 11;
+  }
+  
+  .nerd-face {
+      position: absolute;
+      bottom: 52%; /* half the face peeking */
+      left: 50%;
+      height: 200px; /* adjust based on your image */
+      width: 140px; /* adjust based on your image */
+      z-index: 6; /* behind the pipe */
+      object-fit: contain;
+      transform: translate(-50%, 50%); /* adjusting for center alignment and half face peeking */
+  }
+
+  .pipe-sticker {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 50px;
+    transform: rotate(-10deg);
+    /* pointer-events: none; */
+    z-index: 11;
+  }
+
+  .pipe-sticker2 {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(-10deg);
+    /* pointer-events: none; */
+    z-index: 11;
+  }
+  
+  .tetris {
+    animation: shootFastAndFade 2.5s ease-out forwards;
+    position: absolute;
+    z-index: 5; /* behind the pipe */
+    opacity: 0; /* initially hidden */
+  }
+
+  footer {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+
+  footer a {
+    color: rgb(243, 255, 72);
+    text-decoration: underline;
+  }
+  footer a:hover {
+    text-decoration: none;
+  }
+
+  .copyright {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .nerd-face {
+      bottom: 54%; /* adjust this to fit your needs */
+    } 
+    .resume {
+      left: 30%;
+    }
+  }
+  
+  
+   @media screen and (max-width: 600px) {
+     .nerd-face {
+       bottom: 54%; /* adjust this to fit your needs */
+     } 
+     .resume {
+      left: 20%;
+    }
+
+  }
+
+  @media screen and (max-width: 430px) {
+    .nerd-face {
+      bottom: 55%; /* adjust this to fit your needs */
+    } 
+    .resume {
+      top: 50%;
+      left: 13%;
+    }
+    footer {
+      bottom: 25%;
+    }
+    .desk {
+      top: 50%;
+    }
+    .pipe {
+      top: 50%;
+    }
+    .title {
+      position: absolute;
+      top: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-align: center;
+      z-index: 0; /* Above everything */
+    }
+  
+    .logo {
+      height: 340px;
+      width: 400px;
+    }
+ }
+  
+  @keyframes shootFastAndFade {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    70% {
+      transform: translate(calc(var(--target-left) - 50vw), calc(var(--target-top) - 40vh));
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(calc(var(--target-left) - 50vw), calc(var(--target-top) - 40vh));
+    }
+  }
+  
+  
+  @keyframes funnelToCenter {
+    0% {
+      left: -60px;
+      top: var(--initial-top); /* we'll set this in JS */
+      opacity: 1;
+      transform: scale(1);
+    }
+    70% {
+      left: 50vw;
+      top: 55vh; /* center of screen */
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      left: 50vw;
+      top: 53vh;
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  
