@@ -80,7 +80,9 @@ const PipeAnimation = () => {
     <>
     <div className="canvas">
       <div className="title">
-        <img src="/fsd.png" alt="Logo" className="logo" />
+        <a href="/about">
+          <img src="/fsd.png" alt="Logo" className="logo" />
+        </a>
       </div>
       {circles.map(circle => (
         <div
@@ -106,6 +108,9 @@ const PipeAnimation = () => {
         </a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           <img src="/github.png" alt="Sticker2" className="pipe-sticker2" />
+        </a>
+        <a href="https://www.linkedin.com/in/matthew-flesher-277a8542/" target="_blank" rel="noopener noreferrer">
+          <img src="/li.png" alt="Sticker3" className="pipe-sticker3" />
         </a>
       </div>
       

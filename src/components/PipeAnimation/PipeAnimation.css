@@ -96,6 +96,17 @@
     top: 10px;
     width: 40px;
     height: 40px;
+    transform: rotate(10deg);
+    /* pointer-events: none; */
+    z-index: 11;
+  }
+
+  .pipe-sticker3 {
+    position: absolute;
+    right: 18px;
+    top: 52px;
+    width: 55px;
+    height: 55px;
     transform: rotate(-10deg);
     /* pointer-events: none; */
     z-index: 11;

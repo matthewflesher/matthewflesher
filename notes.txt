@@ -1,15 +1,15 @@
-Create Go Webserver and GitHub action to deploy it to AWS
-Add pers site to S3 and serve with Webserver 
-
-Do Terraform and Ansible Kubernetes Cluster tutorial
-ADD Selenium Hub and other BDD Testing Modules there
-and Run
-
 Pers Site
-- LI link - logo on Laptop
 - Have head pop up and wave if clicked
-- Click Name logo to go to About with more info; need routes
-  - Create about page with the ability to add more projects/demo videos
+- Create about page with the ability to add more projects/demo videos
+- Add tests and cypress tests from old site  
+
+- Create Go Webserver and GitHub action to deploy it to AWS
+- Add pers site to S3 and serve with Webserver 
+
+- Do Terraform and Ansible Kubernetes Cluster tutorial
+- ADD Selenium Hub and other BDD Testing Modules there
+- and Run
+
   **Publish
 - Robot chat bot on desk
 - AI Rocks sticker on Laptop w/ Link 
