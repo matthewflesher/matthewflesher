@@ -1,14 +1,14 @@
-Pers Site
-- Have head pop up and wave if clicked
-- Create about page with the ability to add more projects/demo videos
-- Add tests and cypress tests from old site  
+Pers Site 
 
-- Create Go Webserver and GitHub action to deploy it to AWS
-- Add pers site to S3 and serve with Webserver 
+- Create GitHub action to deploy it to AWS S3
+- Create necessary AWS Resources - test cloudfront, Cloudfront - Route53
 
 - Do Terraform and Ansible Kubernetes Cluster tutorial
 - ADD Selenium Hub and other BDD Testing Modules there
 - and Run
+
+- Create about page with the ability to add more projects/demo videos
+- Add tests and cypress tests from old site 
 
   **Publish
 - Robot chat bot on desk

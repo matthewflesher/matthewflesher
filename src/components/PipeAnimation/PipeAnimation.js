@@ -5,7 +5,38 @@ const PipeAnimation = () => {
   const [circles, setCircles] = useState([]);
   const [tetrisShapes, setTetrisShapes] = useState([]);
   const countSinceLastShapeRef = React.useRef(0);
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0; 
+  
+  const [isNerdVisible, setIsNerdVisible] = useState(false);
+  const isTouch = useState(isTouchDevice);
+  const nerdRef = React.useRef();
+  
+  const toggleNerd = (e) => {
+    if (isTouch) {
+      e.stopPropagation(); // ← prevents outside click from firing
+      setIsNerdVisible(prev => !prev);
+    }
+  };   
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        nerdRef.current &&
+        !nerdRef.current.contains(e.target)
+      ) {
+        setIsNerdVisible(false);
+      }
+    };
+  
+    if (isTouch) {
+      document.addEventListener('click', handleClickOutside);
+    }
+  
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isTouch]);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,9 +111,10 @@ const PipeAnimation = () => {
     <>
     <div className="canvas">
       <div className="title">
-        <a href="/about">
+        {/* <a href="/about">
           <img src="/fsd.png" alt="Logo" className="logo" />
-        </a>
+        </a> */}
+        <img src="/fsd.png" alt="Logo" className="logo" />
       </div>
       {circles.map(circle => (
         <div
@@ -97,7 +129,7 @@ const PipeAnimation = () => {
             onAnimationEnd={() => handleCircleDone(circle)}
         />
       ))}
-      <img src="/nerd.png" alt="Nerd face" className="nerd-face" />
+      {/* <img src="/nerd.png" alt="Nerd face" className="nerd-face" /> */}
       <img src="desk.png" alt="Desk" className="desk"/>
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         <img src="resume-paper.png" alt="Resume" className="resume"/>
@@ -129,6 +161,20 @@ const PipeAnimation = () => {
           }}
         />
       ))}
+      <div className="nerd-container">
+        <div
+          className={`nerd-hover-zone ${isTouch && isNerdVisible ? 'active' : ''}`}
+          onClick={toggleNerd}
+          ref={nerdRef}
+        >
+
+          <img src="/nerd.png" alt="Nerd face" className="nerd-face" />
+          <div className="speech-bubble">
+             <p><b>Hello! Welcome to my site!</b></p>
+             <p className='small-text'>Check out my laptop stickers.</p>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
       <a href="mailto:mrfleshe@umich.edu" target="_blank" rel="noopener noreferrer">
