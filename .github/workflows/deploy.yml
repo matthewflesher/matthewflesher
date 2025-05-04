@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Cache node_modules and Cypress
-        uses: actions/upload-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: app-deps
           path: |
