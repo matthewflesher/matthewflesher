@@ -177,8 +177,8 @@ const PipeAnimation = () => {
       </div>
     </div>
     <footer>
-      <a href="mailto:m.flesher.1979@gmail.edu" target="_blank" rel="noopener noreferrer">
-      m.flesher.1979@gmail.com
+      <a href="mailto:mrfleshe@umich.edu" target="_blank" rel="noopener noreferrer">
+      mrfleshe@umich.edu
       </a>
       <p className='copyright'>© 2025 All rights reserved.</p>
     </footer>

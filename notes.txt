@@ -1,12 +1,8 @@
 Pers Site 
 
-- Do Terraform and Ansible Kubernetes Cluster tutorial
-- ADD Selenium Hub and other BDD Testing Modules there
-- and Run
+- Fix page look on all iPhones and iPad
+- Fix children same key error
 
-- Create about page with the ability to add more projects/demo videos
+- Create about page with projects/demo videos
 
-  **Publish
-- Robot chat bot on desk
-- AI Rocks sticker on Laptop w/ Link 
-- BDD Testing Suite link
+- Robot chat bot
