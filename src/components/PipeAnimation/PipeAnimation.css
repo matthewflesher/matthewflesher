@@ -202,7 +202,7 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -286,7 +286,31 @@
       display: none;
     }
  }
-  
+
+ @media screen and (max-height: 668px) and (max-width: 376px) {
+   footer {
+     bottom: 15%;
+   }
+   .title {
+     top: -10%;
+   }
+  }
+
+    @media screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1366px) 
+    and (-webkit-min-device-pixel-ratio: 1.5) 
+    and (pointer: coarse) {
+
+    footer {
+      bottom: 15%;
+    }
+
+    .title {
+      top: 10%;
+    }
+  }
+
   @keyframes shootFastAndFade {
     0% {
       transform: translate(0, 0);

@@ -1,8 +1,5 @@
 Pers Site 
 
-- Fix page look on all iPhones and iPad
-- Fix children same key error
-
 - Create about page with projects/demo videos
 
 - Robot chat bot
