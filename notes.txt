@@ -1,14 +1,18 @@
 Pers Site 
 
-- Create GitHub action to deploy it to AWS S3
-- Create necessary AWS Resources - test cloudfront, Cloudfront - Route53
+- Refactor GitHub action to unit test, deploy to S3-test, run cypress test,
+             deploy to s3 live, run cypress smoke test
+
+  Create basic unit test using Jest and run
+  Read about cypress and run a basic test upon deployment 
+    Test Links in Cypress 
+  Create Smoke test in cypress for production
 
 - Do Terraform and Ansible Kubernetes Cluster tutorial
 - ADD Selenium Hub and other BDD Testing Modules there
 - and Run
 
 - Create about page with the ability to add more projects/demo videos
-- Add tests and cypress tests from old site 
 
   **Publish
 - Robot chat bot on desk

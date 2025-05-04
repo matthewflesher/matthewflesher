@@ -3,7 +3,7 @@ name: Deploy React App to S3
 on:
   push:
     branches:
-      - main  # Change to your default branch if needed
+      - main  
 
 jobs:
   deploy:
@@ -26,6 +26,9 @@ jobs:
 
       - name: Build React App
         run: npm run build
+
+      - name: Run Tests
+        run: npm test
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
