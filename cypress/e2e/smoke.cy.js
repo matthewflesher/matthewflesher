@@ -3,9 +3,9 @@ describe('Email is displayed', () => {
       cy.visit('/');
     });
   
-    it('should show the correct email address in the footer', () => {
+    it('should show the correct copyright in footer', () => {
       cy.fixture('example').then((data) => {
-        cy.contains(data.email).should('be.visible');
+        cy.contains(data.copyright).should('be.visible');
       });
     });
   });
