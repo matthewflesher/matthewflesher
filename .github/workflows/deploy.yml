@@ -84,10 +84,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Download dependencies
-        uses: actions/download-artifact@v4
-        with:
-          name: app-deps
+      - name: Install dependencies
+        run: npm install
 
       - name: Download built app
         uses: actions/download-artifact@v4
