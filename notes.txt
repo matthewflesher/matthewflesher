@@ -1,9 +1,5 @@
 Pers Site 
 
-- Refactor GitHub action to run cypress test against cloudfront distribution,
-             deploy to s3 prod buckete, run cypress smoke test against 
-             matthewflesher.com
-
 - Do Terraform and Ansible Kubernetes Cluster tutorial
 - ADD Selenium Hub and other BDD Testing Modules there
 - and Run

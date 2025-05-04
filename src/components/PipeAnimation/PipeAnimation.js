@@ -138,7 +138,7 @@ const PipeAnimation = () => {
         <a href="https://12inchtails.com" target="_blank" rel="noopener noreferrer">
           <img src="/murds.png" alt="Sticker" className="pipe-sticker" />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/matthewflesher" target="_blank" rel="noopener noreferrer">
           <img src="/github.png" alt="Sticker2" className="pipe-sticker2" />
         </a>
         <a href="https://www.linkedin.com/in/matthew-flesher-277a8542/" target="_blank" rel="noopener noreferrer">
@@ -177,8 +177,8 @@ const PipeAnimation = () => {
       </div>
     </div>
     <footer>
-      <a href="mailto:mrfleshe@umich.edu" target="_blank" rel="noopener noreferrer">
-        mrfleshe@umich.edu
+      <a href="mailto:m.flesher.1979@gmail.edu" target="_blank" rel="noopener noreferrer">
+      m.flesher.1979@gmail.com
       </a>
       <p className='copyright'>© 2025 All rights reserved.</p>
     </footer>
